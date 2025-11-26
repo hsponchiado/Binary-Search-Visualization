@@ -11,11 +11,11 @@ def is_sorted(arr):
 # ---------------------------------------------------------
 # Visualization Helper: Create HTML boxes for each element
 # ---------------------------------------------------------
-def visualize_array(arr, low, high, mid):
+def visualize_array(arr, left, right, mid):
     """
     Returns an HTML string that visually displays the array.
     - Mid index → orange box
-    - Active search range (low to high) → light blue
+    - Active search range (left to right) → light blue
     - Everything else → grey (excluded)
     """
     html_parts = []
@@ -30,8 +30,8 @@ def visualize_array(arr, low, high, mid):
                 f'border-radius:4px; font-weight:bold;">{val}</span>'
             )
 
-        # Highlight active search range (low ≤ i ≤ high)
-        elif low <= i <= high:
+        # Highlight active search range (left ≤ i ≤ high)
+        elif left <= i <= right:
             html_parts.append(
                 f'<span style="display:inline-block; width:40px; height:40px; line-height:40px; '
                 f'text-align:center; background-color:#ADD8E6; color:black; margin:2px; '
@@ -80,8 +80,8 @@ def binary_search_visualizer(array_str: str, target_str: str):
     # --------------------------
     # Binary Search Setup
     # --------------------------
-    low = 0
-    high = len(arr) - 1
+    left = 0
+    right = len(arr) - 1
     steps_html = []          # Store visualization for each step
     found = False
     found_index = -1
@@ -91,13 +91,13 @@ def binary_search_visualizer(array_str: str, target_str: str):
     # --------------------------
     # Binary Search Loop
     # --------------------------
-    while low <= high:
+    while left <= right:
 
-        mid = (low + high) // 2
+        mid = (left + right) // 2
         comparisons += 1  # Every check of arr[mid] counts as a comparison
 
         # Build HTML for current step visualization
-        viz_html = visualize_array(arr, low, high, mid)
+        viz_html = visualize_array(arr, left, right, mid)
 
         # Describe what is happening at this step
         step_html = f"""
@@ -123,10 +123,10 @@ def binary_search_visualizer(array_str: str, target_str: str):
             break
 
         elif arr[mid] < target:
-            low = mid + 1  # Move right
+            left = mid + 1  # Move right
 
         else:
-            high = mid - 1  # Move left
+            right = mid - 1  # Move left
 
         step_num += 1
 
