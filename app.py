@@ -75,22 +75,22 @@ def binary_search_visualizer(array_str: str, target_str: str):
 
     # Input validation
     if not array_str.strip():
-        return "Error: Please enter a list of numbers."
+        return "Error: Please enter a list of numbers.", "", "", ""
     if not target_str.strip():
-        return "Error: Please enter a target value."
+        return "Error: Please enter a target value.", "", "", ""
 
     # Convert input strings to integers
     try:
         target = int(target_str)
         arr = [int(x.strip()) for x in array_str.split(",")]
     except ValueError:
-        return "Error: All inputs must be integers."
+        return "Error: All inputs must be integers.", "", "", ""
 
     if len(arr) == 0:
-        return "Error: Array cannot be empty."
+        return "Error: Array cannot be empty.", "", "", ""
 
     if not is_sorted(arr):
-        return "Error: The input list must be sorted in ascending order."
+        return "Error: The input list must be sorted in ascending order.", "", "", ""
 
     # Binary search setup
     left= 0
