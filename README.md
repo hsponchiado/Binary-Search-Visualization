@@ -63,7 +63,10 @@ Input -> Processing -> Output Flow:
 - Output (via GUI)
     - The final result (found at index __ / not found) 
     - Visual indicators that shows the search progress 
-    - Text that shows step by step process 
+    - Text that shows step by step process
+ 
+**Usage of HTML in code**
+- In this code HTML was used, because I wanted to actually show the user how binary search works. For that I wanted  .... 
 
 **Hugging Face Link**
 - 
