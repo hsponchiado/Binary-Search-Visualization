@@ -107,7 +107,7 @@ def binary_search_visualizer(array_str: str, target_str: str):
         comparisons += 1
 
         # HTML visual representation of current step
-        viz_html = visualize_array(arr, low, right, mid)
+        viz_html = visualize_array(arr, left, right, mid)
 
         # ----------------------------------------------------------------------------
         # This block creates a styled HTML <div> containing:
