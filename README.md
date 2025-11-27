@@ -6,7 +6,7 @@ Demo Screenshot:
 
 **Problem Breakdown & Computational Thinking:**
 
-Binary search is a very efficient searching algorithm that complexity is O(1) for the best case and O(log n) for the average and worst case, meaning it is a very good algorithm. It also shows use perfectly how the divide and conquer strategy works, by repeatedly halving the given list. Below is the computational thinking breakdown that I used to design this app. 
+Binary search is a very efficient searching algorithm which its complexity is O(1) for the best case and O(log n) for the average and worst case, meaning it is a very good algorithm. It also shows us how the divide and conquer strategy works perfectly, by repeatedly halving the given list. Below is the computational thinking breakdown that I used to design this app. 
 
 **1. Decomposition**
 
