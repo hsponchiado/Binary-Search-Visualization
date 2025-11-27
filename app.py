@@ -1,10 +1,9 @@
-3import gradio as gr
+import gradio as gr
 
 # Helper Function: Check if sorted
 
 def is_sorted(arr):
     return all(arr[i] <= arr[i + 1] for i in range(len(arr) - 1))
-
 
 # Visualization Helper: Create HTML boxes for each element
 
@@ -57,12 +56,13 @@ def visualize_array(arr, left, right, mid):
 # Binary Search Logic + Step by Step Visualization
 
 def binary_search_visualizer(array_str: str, target_str: str):
-
-   try:
+    
+    try: 
         target = int(target_str)
         arr = array_str.split(",")
         arr = [int(x.strip()) for x in arr]
-    except:
+    
+    except ValueError:
         return "Error: Please make sure all values are integers.", "", "", ""
 
     # Check if the list is empty
@@ -74,7 +74,7 @@ def binary_search_visualizer(array_str: str, target_str: str):
         return "Error: The list must already be sorted from smallest to biggest.", "", "", ""
         
     # Binary search setup
-    left= 0
+    left = 0
     right = len(arr) - 1
     steps_html = []    
     found = False
@@ -128,10 +128,10 @@ def binary_search_visualizer(array_str: str, target_str: str):
     # Using same HTML <span> boxes but rightlighting the final target
 
     if found: 
-        final_viz = (visualize_array(arr, -1, -1, found_index)
+        final_viz = (visualize_array(arr, -1, -1, found_index))
 
     else: 
-        visualize_array(arr, 0, -1, -1))
+        visualize_array(arr, 0, -1, -1)
 
     # HTML wrapper <div> to center the final visualization
 
