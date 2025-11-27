@@ -111,8 +111,8 @@ def binary_search_visualizer(array_str: str, target_str: str):
         #
         # border-left:3px solid #4CAF50 → Green line that is simply used for decoration
         # ----------------------------------------------------------------------------
-        step_html = 
-        f""" <div style="margin-bottom:20px; padding:10px; border-left:3px solid #4CAF50;"> <strong>Step {step_num}:</strong> Checking index {mid} → value {arr[mid]}<br> 
+        step_html = f"""
+        <div style="margin-bottom:20px; padding:10px; border-left:3px solid #4CAF50;"> <strong>Step {step_num}:</strong> Checking index {mid} → value {arr[mid]}<br> 
         Target = {target} → { "Found!" if arr[mid] == target else "Too small → search right" if arr[mid] < target else "Too large → search left" }
         <!-- Insert the HTML boxes created for this step --> <div style="margin-top:10px;">{viz_html}</div> </div> """
 
