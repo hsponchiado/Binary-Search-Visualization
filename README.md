@@ -16,6 +16,16 @@ Not Found:
 
 ![Not Found](assets/not_found.png)
 
+Unsorted List:
+
+![Unsorted](assets/unorganized.png)
+
+Invalid Input Error:
+
+![Invalid](assets/not_int.png)
+
+
+
 **Problem Breakdown & Computational Thinking:**
 
 Binary search is a very efficient searching algorithm which its complexity is O(1) for the best case and O(log n) for the average and worst case, meaning it is a very good algorithm. It also shows us how the divide and conquer strategy works perfectly, by repeatedly halving the given list. Below is the computational thinking breakdown that I used to design this app. 
