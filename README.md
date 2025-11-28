@@ -27,7 +27,7 @@ Invalid Input Error:
 
 **Problem Breakdown & Computational Thinking:**
 
-Binary search is a very efficient searching algorithm which its complexity is O(1) for the best case and O(log n) for the average and worst case, meaning it is a very good algorithm. It also shows us how the divide and conquer strategy works perfectly, by repeatedly halving the given list. Below is the computational thinking breakdown that I used to design this app. 
+Binary search is a very efficient searching algorithm which its complexity is O(1) for the best case and O(log n) for the average and worst case, meaning it is a very good algorithm. It also shows us how the divide and conquer strategy works perfectly, by repeatedly halving the given list. Below is the computational thinking breakdown that I used to design this app. The reason I chose Binary Search specifically is because I believe many students learn the steps, but struggle to visualize how the search range actually works. By concluding this project, students can now see clearly a step by step process of how the algorithm works. 
 
 **1. Decomposition**
 
@@ -93,7 +93,13 @@ Input -> Processing -> Output Flow:
 - 
 
 **Steps To Run**
-- 
+- Steps to run locally:
+    - Install Python (3.10+ recommended)
+    - Install Gradio: pip istall gradio
+    - Download Project Files
+    - Open a terminal in the project folder
+    - Run: python app.py
+    - Your browser will automatically open the application
 
 
 **Author & Acknowledgements**
