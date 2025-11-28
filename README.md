@@ -2,11 +2,16 @@
 
 For this final project for the CISC121 class I have decided to create a visualization of the Binary Search algorithm. This program allows its users to enter a sorted list and a target value inside the list, then watch how the algorithm would check the middle element of the list, narrow down the search space, and finally finding the target value. 
 
-Demo Screenshot:
+**Demo Screenshot:**
 
 Homepage: 
 
 ![Homepage](assets/homepage.png)
+
+Successful Search (Target Found):
+
+![Successful Search](assets/found.png)
+
 
 
 
