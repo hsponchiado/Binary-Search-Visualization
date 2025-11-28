@@ -27,7 +27,7 @@ Invalid Input Error:
 
 **Problem Breakdown & Computational Thinking:**
 
-Binary search is a very efficient searching algorithm which its complexity is O(1) for the best case and O(log n) for the average and worst case, meaning it is a very good algorithm. It also shows us how the divide and conquer strategy works perfectly, by repeatedly halving the given list. Below is the computational thinking breakdown that I used to design this app. The reason I chose Binary Search specifically is because I believe many students learn the steps, but struggle to visualize how the search range actually works. By concluding this project, students can now see clearly a step by step process of how the algorithm works. 
+Binary Search is a fast and efficient way to look for a value in a sorted list. Its best-case time is O(1) and its average and worst case is O(log n) because the algorithm keeps cutting the list in half. I chose this algorithm because many students learn the steps, but it can still be hard to picture how the search range gets smaller each time. With this project, users can actually see the process happen step by step, which makes the algorithm easier to understand. Below is the computational thinking breakdown I used to design this app.
 
 **1. Decomposition**
 
