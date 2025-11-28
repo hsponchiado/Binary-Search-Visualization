@@ -12,7 +12,7 @@ Successful Search (Target Found):
 
 ![Successful Search](assets/found.png)
 
-Unsuccessful Search (Target Not Found:
+Unsuccessful Search (Target Not Found):
 
 ![Not Found](assets/not_found.png)
 
