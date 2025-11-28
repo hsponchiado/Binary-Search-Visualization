@@ -12,8 +12,9 @@ Successful Search (Target Found):
 
 ![Successful Search](assets/found.png)
 
+Not Found:
 
-
+![Not Found](assets/not_found.png)
 
 **Problem Breakdown & Computational Thinking:**
 
