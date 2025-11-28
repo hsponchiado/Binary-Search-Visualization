@@ -127,11 +127,9 @@ def binary_search_visualizer(array_str: str, target_str: str):
     # FINAL VISUALIZATION
     # Using same HTML <span> boxes but rightlighting the final target
 
-    if found: 
-        final_viz = (visualize_array(arr, -1, -1, found_index))
-
-    else: 
-        visualize_array(arr, 0, -1, -1)
+    final_viz = (
+        visualize_array(arr, -1, -1, found_index) if found
+        else visualize_array(arr, 0, -1, -1))
 
     # HTML wrapper <div> to center the final visualization
 
