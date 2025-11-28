@@ -87,10 +87,10 @@ Input -> Processing -> Output Flow:
     - Text that shows step by step process
  
 **Usage of HTML in code**
-- In this code HTML was used, because I wanted to actually show the user how binary search works, by using a clear animation, like colored boxes and step by step change. Python alone cannot create those boxes inside a Gradio app. While Gradio provides high level inputs like text boxes, dataframes, and even image displays, it does not support styling individual list items. By using small pieces of HTML inside of Gradio, I was able to create boxes that shows the list at each step. These boxes make it easy to see which part of the list is being searched, which value is being checked, and which values are no longer needed after the list is halved. 
+-In my code, I used a little bit of HTML so I could show the binary search steps using colored boxes. Python by itself can’t create these visual boxes inside a Gradio app. Gradio is great for text and images, but it doesn’t let you style each number in a list. By adding small HTML sections, I was able to make the boxes change color at each step. This makes it easy for users to see which part of the list is being searched, which number is being checked, and which numbers have been removed from the search.
 
-**Hugging Face Link**
-- 
+Hugging Face Link
+-
 
 **Steps To Run**
 - Steps to run locally:
