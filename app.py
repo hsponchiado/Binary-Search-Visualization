@@ -1,3 +1,9 @@
+# AI Disclaimer:
+# For parts of this project the help from AI (such as ChatGPT) 
+# were used for debugging, explanations, and code
+# formatting. All final decisions, logic, structure, and testing
+# were done by me, and I fully understand how the program works.
+
 import gradio as gr
 
 # Helper Function: Check if sorted
