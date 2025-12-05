@@ -5,6 +5,7 @@
 # were done by me, and I fully understand how the program works.
 
 import gradio as gr
+import random
 
 # Helper Function: Check if sorted
 
@@ -58,6 +59,11 @@ def visualize_array(arr, left, right, mid):
     # Join all HTML <span> boxes together into one string
     return "".join(html_parts)
 
+# Create a random sorted list of unique numbers 
+def generate_random_list(size):
+    nums = random.sample(range(1,100),size)
+    nums.sort()
+    return ",".join(str(n)for n in nums)
 
 # Binary Search Logic + Step by Step Visualization
 
@@ -149,8 +155,26 @@ with gr.Blocks(title="Binary Search Visualizer") as demo:
 
     # Page title + short description
     gr.Markdown("# 🔍 Binary Search Visualizer")
+    with gr.Accordion("Learn More About Binary Search", open=False):
+        gr.Markdown("""
+        About Binary Search:
+        Binary Search is an efficient algorithm that works only on **sorted lists**. 
+        It repeatedly checks the **middle value** and cuts the serch space in half 
+        until the target is found or the range of the list becomes empty.
+        """)
     gr.Markdown("Enter a sorted **list of integers, separated by commas**, and see binary search visualized!")
 
+    # Slider that lets the user choose a number for a random sorted list 
+    with gr.Row():
+        random_size = gr.Slider(
+            minimum = 5,
+            maximum = 30,
+            step = 1,
+            value = 10,
+            label = "Random List Size"
+        )
+        random_btn = gr.Button("Generate Random Sorted List")
+        
     # This row groups the two textboxes side-by-side
     with gr.Row():
         array_input = gr.Textbox(label="Sorted List (comma-separated)", placeholder="e.g., 1,3,5,7,9,11,13,15")
@@ -163,7 +187,11 @@ with gr.Blocks(title="Binary Search Visualizer") as demo:
     final_array_display = gr.HTML(label="Final Array State")       
     steps_display = gr.HTML(label="Step-by-Step Visualization")  
 
-    # Connect the button to the function so it runs when clicked
+
+    #Connects the button to the generate_random_list function so it runs when clicked
+    random_btn.click(fn=lambda size: generate_random_list(size), inputs=[random_size],outputs=[array_input])
+    
+    # Connect the button to the binary_search_visualizer function so it runs when clicked
     run_btn.click(fn=binary_search_visualizer, inputs=[array_input, target_input], outputs=[result_output, final_array_display, steps_display, comparisons_output])
 
     # Color legend (HTML elements explaining colors)
